@@ -21,7 +21,7 @@ const Topic = () => {
                     <h1 className="font-medium">Code is like humor. When you have to explain it, it’s bad.</h1>
                 </div>
             </div>
-            <div className="grid grid-col-1 md:grid-col-2 lg:grid-cols-4 gap-5 mx-5 md:mx-20 ">
+            <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-5 md:mx-20 ">
                 {data.map((data) => (
                     <Subject key={data.id} data={data}></Subject>
                 ))}

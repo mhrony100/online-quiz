@@ -9,7 +9,7 @@ const Statistics = () => {
     return (
         <div>
             <h1 className="text-2xl"> This is Statistics</h1>
-            <BarChart className="mx-auto mt-5" width={730} height={250} data={data.data}>
+            <BarChart className="mx-auto mt-5" width={300} height={250} data={data.data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis dataKey="total" />

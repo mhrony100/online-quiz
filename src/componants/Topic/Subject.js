@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 const Subject = ({ data }) => {
     // console.log(data);
+
     const { name, logo, id, total } = data;
     return (
         <div className="shadow-lg  h-full w-auto">
-            <div className="bg-slate-400 rounded-lg">
-                <img src={logo} alt="logo"></img>
+            <div className="bg-slate-400 rounded-lg ">
+                <img className="" src={logo} alt="logo"></img>
             </div>
             <div className="flex justify-between font-bold p-5 text-teal-300 bg-slate-700 rounded-b-lg">
                 <div>

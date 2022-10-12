@@ -4,10 +4,7 @@ import Questions from "./Questions";
 
 const Quiz = () => {
     const quiz = useLoaderData();
-    // const questions = quiz.data.questions;
-    // console.log(quiz);
     const { name, questions, total } = quiz.data;
-    // console.log(name, questions, total);
     return (
         <div className="bg-slate-500">
             <h1 className="text-center text-2xl font-bold pt-4">{name}</h1>
