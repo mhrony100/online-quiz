@@ -6,8 +6,9 @@ const Header = () => {
         <div>
             <nav className="flex justify-between space-x-10 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 h-20 p-5">
                 <div>
-                    <h1 className="text-xl">
-                        Learn <small className="font-bold text-2xl text-red-400">#</small>Code
+                    <h1 className="text-xl font-bold">
+                        <small className="">Learn</small>
+                        <small className=" text-2xl text-red-400">#</small>Code
                     </h1>
                 </div>
                 <div className="font-bold text-xl ">

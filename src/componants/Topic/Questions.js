@@ -25,7 +25,6 @@ const Questions = ({ questions }) => {
     };
     return (
         <div className=" w-2/3 mx-auto p-5">
-            <ToastContainer position="top-right" reverseOrder={true}></ToastContainer>
             <div className="flex justify-between rounded-t-lg bg-slate-300 pt-5 px-8">
                 <h1 className="text-center font-bold ">{newQuestion}</h1>
                 <FontAwesomeIcon onClick={showAnswer} icon={faEye} className="cursor-pointer"></FontAwesomeIcon>
@@ -41,6 +40,7 @@ const Questions = ({ questions }) => {
                     </button>
                 ))}
             </div>
+            <ToastContainer position="top-right" reverseOrder={true}></ToastContainer>
         </div>
     );
 };
