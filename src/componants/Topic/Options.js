@@ -1,9 +1,12 @@
 import React from "react";
 
-const Options = () => {
+const Options = ({ options }) => {
+    // console.log(options.length);
     return (
         <div>
-            <h1>hello</h1>
+            {options.map((option) => (
+                <h1>{option}</h1>
+            ))}
         </div>
     );
 };
