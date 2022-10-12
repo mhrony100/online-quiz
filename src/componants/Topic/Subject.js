@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Subject = ({ data }) => {
-    console.log(data);
+    // console.log(data);
     const { name, logo, id, total } = data;
     return (
         <div className="shadow-lg  h-full w-auto">
