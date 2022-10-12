@@ -2,43 +2,40 @@ import React from "react";
 
 const Blog = () => {
     return (
-        <div className="bg-slate-800 p-10 text-slate-200">
-            <div>
-                <p className="font-bold text-center text-2xl py-2">What Is React & How Does It Actually Work?</p>
-                <p>
-                    ReactJS is one of the most popular JavaScript libraries for mobile and web application development.
-                    Created by Facebook, React contains a collection of reusable JavaScript code snippets used for user
-                    interface (UI) building called components.
+        <div className="bg-slate-800 p-10 text-slate-800">
+            <div className="bg-slate-400 p-5 rounded-lg">
+                <p className="font-bold text-center text-3xl py-4">What Is the purpose of react router?</p>
+                <p className="font-medium text-start text-xl py-2">
+                    React Router is a standard library for routing in React. It enables the navigation among views of
+                    various components in a React Application, allows changing the browser URL, and keeps the UI in sync
+                    with the URL.
                 </p>
-                <p>
-                    A React app usually has a single root DOM node. Rendering an element into the DOM will change the
-                    user interface of the page.Whenever a React component returns an element, the Virtual DOM will
-                    update the real DOM to match.
-                </p>
-
-                <p className="font-bold text-center text-2xl py-4">Difference between props and state.</p>
-                <p className="py-2">PROPS</p>
-                <p>The Data is passed from one component to another.</p>
-                <p>It is Immutable (cannot be modified).</p>
-                <p>Props can be used with state and functional components.</p>
-                <p>Props are read-only.</p>
-                <p className="py-2">STATE</p>
-                <p>The Data is passed within the component only.</p>
-                <p>It is Mutable ( can be modified).</p>
-                <p>State can be used only with the state components/class component (Before 16.0).</p>
-                <p>State is both read and write.</p>
-                <p className="font-bold text-center text-2xl py-4">Usages of useEffect</p>
-                <p>
-                    By using this Hook, you tell React that your component needs to do something after render. React
-                    will remember the function you passed (we’ll refer to it as our “effect”), and call it later after
-                    performing the DOM updates.
+                <p className="font-medium text-start text-xl py-2">
+                    React Router, and dynamic, client-side routing, allows us to build a single-page web application
+                    with navigation without the page refreshing as the user navigates. React Router uses component
+                    structure to call components, which display the appropriate information.
                 </p>
             </div>
-            <div className=" flex justify-center items-center h-44">
-                <p>
-                    <span className="text-green-500 font-bold text-2xl">Health</span>
-                    <span className="text-rose-600 font-bold text-2xl">Master</span>
-                    <span className="text-green-500 font-bold text-2xl">Club</span>
+
+            <div className="bg-slate-400 p-5 rounded-lg mt-5">
+                <p className="font-bold text-center text-3xl py-4">How does Context API works</p>
+
+                <p className="font-medium text-start text-xl py-2">
+                    React.createContext() is all you need. It returns a consumer and a provider. Provider is a component
+                    that as it's names suggests provides the state to its children. It will hold the "store" and be the
+                    parent of all the components that might need that store. Consumer as it so happens is a component
+                    that consumes and uses the state
+                </p>
+            </div>
+            <div className="bg-slate-400 p-5 rounded-lg mt-5">
+                <p className="font-bold text-center text-3xl py-4">React JS useRef Hook</p>
+
+                <p className="font-medium text-start text-xl py-2">
+                    The useRef returns a mutable ref object. This object has a property called .current. The value is
+                    persisted in the refContainer.current property. These values are accessed from the current property
+                    of the returned object. The .current property could be initialized to the passed argument
+                    initialValue e.g. useRef(initialValue). The object can persist a value for a full lifetime of the
+                    component
                 </p>
             </div>
         </div>
