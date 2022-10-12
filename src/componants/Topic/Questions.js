@@ -2,19 +2,20 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
-import Options from "./Options";
+// import Options from "./Options";
 import "react-toastify/dist/ReactToastify.css";
 
 const Questions = ({ questions }) => {
     const { options, question, correctAnswer } = questions;
     const newQuestion = question.replace("<p>", "").replace("</p>", "");
-    console.log(questions);
+    // console.log(questions);
+    // console.log(correctAnswer);
     // for (const option of options) {
     // console.log(options.index);
     // }
 
     const showAnswer = () => {
-        console.log(correctAnswer);
+        // console.log(correctAnswer);
         toast.success(`${correctAnswer}`, {
             style: {
                 padding: "16px",
@@ -26,7 +27,26 @@ const Questions = ({ questions }) => {
             },
         });
     };
+    const checkAnswer = (option) => {
+        // console.log(option);
+        // console.log(correctAnswer);
+        if (option === correctAnswer) {
+            toast.success("Correct answer");
+        } else {
+            toast.error(`${correctAnswer}`, {
+                style: {
+                    padding: "16px",
+                    color: "#c52d22",
+                },
+                iconTheme: {
+                    primary: "#22C55E",
+                    secondary: "#FFFAEE",
+                },
+            });
+        }
+    };
 
+    // checkAnswer(correctAnswer);
     return (
         <div className=" w-2/3 mx-auto p-5">
             <ToastContainer position="top-right" reverseOrder={true}></ToastContainer>
@@ -36,7 +56,9 @@ const Questions = ({ questions }) => {
             </div>
             <div className="grid grid-cols-2 bg-slate-300 p-3 pb-5 rounded-b-lg">
                 {options.map((option, index) => (
-                    <Options key={index} option={option}></Options>
+                    <button onClick={() => checkAnswer(option)} key={index} className=" p-5">
+                        {option}
+                    </button>
                 ))}
             </div>
         </div>
