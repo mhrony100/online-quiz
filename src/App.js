@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Blog from "./componants/Blog/Blog";
 import Main from "./componants/Main/Main";
@@ -20,6 +18,7 @@ function App() {
                 },
                 {
                     path: "/statistics",
+                    loader: async () => fetch("https://openapi.programming-hero.com/api/quiz"),
                     element: <Statistics />,
                 },
                 {
@@ -29,7 +28,6 @@ function App() {
                 {
                     path: "/quiz/:id",
                     loader: async ({ params }) => {
-                        // console.log(params);
                         return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`);
                     },
                     element: <Quiz />,
